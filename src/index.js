@@ -10,11 +10,12 @@ const typeDefs = gql`
 //query is what happens when the query is called
 const resolvers = {
   Query: {
-    hello: () => 'Hello world!'
+    hello: () => 'Hello world'
   }
 }
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
 //start server
-server.listen().then(({url}) => console.log(`server sterted ${url}`)) 
+server.listen().then(({ url }) => console.log(`server sterted ${url}`)) 
+//startup = node src/index.js
