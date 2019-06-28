@@ -1,9 +1,14 @@
 const { ApolloServer, gql } = require('apollo-server');
 
 //schema describes functionally avaliable to clients
+//crud-- type mutation us for when changes are made 
 const typeDefs = gql`
   type Query {
     hello: String!
+  }
+
+  type Mutation {
+    register: User
   }
 `;
 //resolvers key used to fetch data
